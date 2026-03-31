@@ -1,0 +1,12 @@
+.stats-row {
+    display: flex;
+    gap: 10px;
+}
+
+.stats-row .stat-card {
+    flex: 1;
+}
+
+.stats-row .register-card {
+    flex: 1;
+}

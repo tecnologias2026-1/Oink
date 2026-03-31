@@ -1,0 +1,20 @@
+.stat-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-lg);
+
+    padding: var(--space-lg);
+    /* 24px por todos lados */
+
+    background: var(--color-white);
+    border-radius: 10px;
+
+    height: fit-content;
+}
+
+.stat-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}

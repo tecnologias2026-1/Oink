@@ -1,0 +1,29 @@
+/* history-item.css */
+.history-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: var(--space-md);
+
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+}
+
+.history-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.history-item-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.history-item-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}

@@ -1,0 +1,130 @@
+/* =========================
+   VARIABLES
+========================= */
+@import url("./variables.css");
+
+/* =========================
+   ASSETS
+========================= */
+@import url("../../assets/icons/icons.css");
+@import url("../../assets/Img/img.css");
+
+/* =========================
+   ATOMS
+========================= */
+@import url("../../components/atoms/button/button.css");
+@import url("../../components/atoms/input/input.css");
+@import url("../../components/atoms/typography/typography.css");
+@import url("../../components/atoms/Icon_User/Icon_User.css");
+/* =========================
+   MOLECULES
+========================= */
+@import url("../../components/molecules/nav-items/nav-items.css");
+@import url("../../components/molecules/header/header.css");
+@import url("../../components/molecules/profile-item/profile-item.css");
+@import url("../../components/molecules/add-profiles/add-profiles.css");
+@import url("../../components/molecules/Title_pages/Title_Pages.css");
+@import url("../../components/molecules/icon-container/icon-container.css");
+@import url("../../components/molecules/Home-card/Home-card_1.css");
+@import url("../../components/molecules/Home-card/register-card.css");
+@import url("../../components/molecules/Home-card/distribution-card.css");
+@import url("../../components/molecules/Home-card/financial-state-card.css");
+@import url("../../components/molecules/Home-card/chart-card.css");
+@import url("../../components/molecules/historial-card/historial-card.css");
+@import url("../../components/molecules/debt-item/debt-item.css");
+
+/* =========================
+   ORGANISMS
+========================= */
+@import url("../../components/organims/navegation/navegation.css");
+@import url("../../components/organims/profiles/profiles.css");
+@import url("../../components/organims/Home/Cards_1.css");
+@import url("../../components/organims/Home/analysis-row.css");
+@import url("../../components/organims/historial-card/historial-card.css");
+
+
+/* =========================
+   RESET
+========================= */
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: var(--font-primary);
+   background: var(--color-background);
+   color: var(--color-text);
+   min-height: 100vh;
+   padding: 0 100px 50px 100px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 100;
+
+   height: 70px;
+
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   padding: 0 var(--space-lg);
+
+   background: var(--color-white);
+   border-bottom: 1px solid var(--color-border);
+}
+
+.sidebar {
+   position: fixed;
+   top: 70px;
+   /* 👈 margen top + altura header */
+   left: 100px;
+   /* 👈 antes era 0 */
+   bottom: 50px;
+   /* 👈 antes era 0 */
+   width: 260px;
+
+   overflow-y: auto;
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-sm);
+   padding: var(--space-md);
+   background: var(--color-background);
+
+}
+
+.page-wrapper {
+   padding-top: 70px;
+   display: flex;
+   min-height: 100vh;
+}
+
+/* =========================
+   CONTENT
+========================= */
+.content {
+   margin-left: 260px;
+   flex: 1;
+   padding: var(--space-lg);
+
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+}
+
+.content-inner {
+   max-width: 900px;
+   margin: 0 auto;
+
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+}

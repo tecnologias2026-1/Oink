@@ -1,0 +1,21 @@
+.financial-state-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+
+    padding: var(--space-lg);
+
+    background: var(--color-white);
+    border-radius: 10px;
+}
+
+.financial-state-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.financial-state-total {
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--color-border);
+}
