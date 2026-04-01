@@ -7,12 +7,19 @@ async function loadPage(page) {
         const html = await response.text();
         mainContent.innerHTML = html;
 
-        // Inicializar TomSelect si existe en la página cargada
+        // TomSelect
         const selectEl = document.querySelector('#categoria-select');
         if (selectEl) {
-            new TomSelect(selectEl, {
-                create: false,
-                placeholder: 'Selecciona una categoría',
+            new TomSelect(selectEl, { create: false });
+        }
+
+        // Flatpickr
+        const dateEl = document.querySelector('.input-date');
+        if (dateEl) {
+            flatpickr(dateEl, {
+                locale: 'es',
+                dateFormat: 'd/m/Y',
+                disableMobile: true,
             });
         }
 
