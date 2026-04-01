@@ -9,6 +9,7 @@
     gap: 16px;
 }
 
+
 /* 🔥 Grid de 2 columnas */
 .fields {
     display: grid;
@@ -16,6 +17,14 @@
     gap: 16px;
     /* espacio entre columnas y filas */
 }
+
+.fields-login {
+    display: grid;
+    flex-direction: column;
+    gap: 16px;
+    /* espacio entre columnas y filas */
+}
+
 
 
 .field {
@@ -79,4 +88,8 @@
 
 .form-savings.active {
     display: block;
+}
+
+.form-balance {
+    background: var(--color-balance-claro);
 }

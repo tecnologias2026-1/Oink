@@ -1,10 +1,16 @@
 const navItems = document.querySelectorAll('.nav-item');
 const mainContent = document.getElementById('main-content');
 
-// 👇 NUEVO: referencias de los dos modos del sidebar
+// Sidebar modos
 const landingNav = document.getElementById("landing-nav");
 const appNav = document.getElementById("app-nav");
 
+// Modal login
+const loginModal = document.getElementById("login-modal");
+
+// =========================
+// 📦 CARGA DE PÁGINAS
+// =========================
 async function loadPage(page) {
     try {
 
@@ -27,13 +33,11 @@ async function loadPage(page) {
         // 🧩 LIBRERIAS
         // =========================
 
-        // TomSelect
         const selectEl = document.querySelector('#categoria-select');
         if (selectEl) {
             new TomSelect(selectEl, { create: false });
         }
 
-        // Flatpickr
         const dateEl = document.querySelector('.input-date');
         if (dateEl) {
             flatpickr(dateEl, {
@@ -55,9 +59,32 @@ async function loadPage(page) {
 document.addEventListener("click", (e) => {
 
     // =========================
-    // 🚀 BOTÓN LANDING → ENTRAR
+    // 🔐 ABRIR MODAL LOGIN
+    // =========================
+    if (e.target.closest("#btn-go-login")) {
+        loginModal?.classList.remove("hidden");
+    }
+
+    // =========================
+    // ❌ CERRAR MODAL (overlay)
+    // =========================
+    if (e.target.closest(".modal-overlay")) {
+        loginModal?.classList.add("hidden");
+    }
+
+    // =========================
+    // ❌ CERRAR MODAL (botón X)
+    // =========================
+    if (e.target.closest(".modal-close")) {
+        loginModal?.classList.add("hidden");
+    }
+
+    // =========================
+    // 🚀 LOGIN → ENTRAR APP
     // =========================
     if (e.target.closest("#btn-start")) {
+        loginModal?.classList.add("hidden"); // cerrar modal
+
         loadPage("home");
 
         navItems.forEach(n => n.classList.remove('active'));
@@ -132,6 +159,6 @@ navItems.forEach(item => {
 
 
 // =========================
-// 🟢 INICIO DE LA APP
+// 🟢 INICIO
 // =========================
 loadPage('landing');

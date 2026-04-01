@@ -37,7 +37,7 @@
 
             <!-- 🟢 LANDING NAV -->
             <div id="landing-nav" class="landing-nav">
-                <button class="btn  btn-balance" id="btn-start">Iniciar Sesion</button>
+                <button class="btn  btn-balance" id="btn-go-login">Iniciar Sesion</button>
                 <button class="btn btn-base btn-register">Registrarse</button>
             </div>
 
@@ -103,6 +103,42 @@
             <!-- Aquí va el contenido de cada página -->
         </main>
 
+    </div>
+
+    <div id="login-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+            <h2 class="title-main">Inicio de Sesion</h2>
+
+
+            <div class="form form-balance">
+
+                <div class="fields-login">
+                    <div class="field">
+                        <span class="text text-secondary">Correo</span>
+                        <input class="input" placeholder="Correo">
+                    </div>
+
+                    <div class="field">
+                        <span class="text text-secondary">Contraseña</span>
+                        <input class="input" placeholder="Contraseña">
+                        <span class="text text-secondary text-light">¿Olvidaste tu contraseña?</span>
+                    </div>
+
+
+                    <button class="btn  btn-balance" id="btn-start">Iniciar Sesion</button>
+                    <div class="field">
+                        <span class="text text-secondary  text-light">¿No tienes una cuenta?</span>
+                        <button class="btn btn-base">Registrarse</button>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
     </div>
 
     <script src="assets/js/router.js"></script>
