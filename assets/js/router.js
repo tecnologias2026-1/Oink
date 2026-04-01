@@ -137,6 +137,22 @@ document.addEventListener("click", (e) => {
     }
 
     // =========================
+    // 🔴 LOGOUT
+    // =========================
+    if (e.target.closest("#btn-logout")) {
+
+        // volver a landing
+        loadPage("landing");
+
+        // mostrar nav de landing
+        if (landingNav) landingNav.style.display = "flex";
+        if (appNav) appNav.style.display = "none";
+
+        // limpiar selección
+        navItems.forEach(n => n.classList.remove('active'));
+    }
+
+    // =========================
     // 🟢 INGRESOS
     // =========================
     if (e.target.closest(".btn-edit-income")) {
