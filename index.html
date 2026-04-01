@@ -38,7 +38,7 @@
             <!-- 🟢 LANDING NAV -->
             <div id="landing-nav" class="landing-nav">
                 <button class="btn  btn-balance" id="btn-go-login">Iniciar Sesion</button>
-                <button class="btn btn-base btn-register">Registrarse</button>
+                <button class="btn btn-base btn-register" id="btn-go-register">Registrarse</button>
             </div>
 
             <!-- 🔵 APP -->
@@ -137,6 +137,62 @@
 
                 </div>
 
+            </div>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+
+            <h2 class="title-main">Registrarse</h2>
+
+            <div class="form form-balance">
+                <div class="fields-login">
+
+                    <div class="field">
+                        <span class="text text-secondary">Nombre</span>
+                        <input class="input" placeholder="Nombre">
+                    </div>
+
+                    <div class="field">
+                        <span class="text text-secondary">Apellidos</span>
+                        <input class="input" placeholder="Apellidos">
+                    </div>
+
+                    <div class="field">
+                        <span class="text text-secondary">Apodo</span>
+                        <input class="input" placeholder="Apodo">
+                    </div>
+
+                    <div class="field">
+                        <span class="text text-secondary">Fecha de nacimiento</span>
+                        <input class="input input-date" placeholder="Selecciona una fecha" readonly>
+                    </div>
+
+                    <div class="field">
+                        <span class="text text-secondary">Correo</span>
+                        <input class="input" placeholder="Correo">
+                    </div>
+
+                    <div class="field">
+                        <span class="text text-secondary">Contraseña</span>
+                        <input class="input" type="password" placeholder="Contraseña">
+                    </div>
+
+                    <div class="field">
+                        <span class="text text-secondary">Escribe de nuevo la Contraseña</span>
+                        <input class="input" type="password" placeholder="Contraseña">
+                    </div>
+
+                    <div class="field">
+                        <button class="btn btn-balance">Crear cuenta</button>
+                        <span class="text text-secondary  text-light">¿Ya tienes una cuenta?</span>
+                    </div>
+
+
+                </div>
             </div>
         </div>
     </div>

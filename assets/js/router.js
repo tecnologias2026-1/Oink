@@ -7,6 +7,7 @@ const appNav = document.getElementById("app-nav");
 
 // Modal login
 const loginModal = document.getElementById("login-modal");
+const registerModal = document.getElementById("register-modal");
 
 // =========================
 // 📦 CARGA DE PÁGINAS
@@ -89,6 +90,36 @@ document.addEventListener("click", (e) => {
 
         navItems.forEach(n => n.classList.remove('active'));
         document.querySelector('[data-page="home"]')?.classList.add('active');
+    }
+
+    // =========================
+    // 🟣 ABRIR REGISTRO
+    // =========================
+    if (e.target.closest("#btn-go-register")) {
+        loginModal?.classList.add("hidden");
+        registerModal?.classList.remove("hidden");
+    }
+
+    // =========================
+    // 🔐 VOLVER A LOGIN
+    // =========================
+    if (e.target.closest("#btn-go-login-from-register")) {
+        registerModal?.classList.add("hidden");
+        loginModal?.classList.remove("hidden");
+    }
+
+    // =========================
+    // ❌ CERRAR REGISTER (overlay)
+    // =========================
+    if (e.target.closest("#register-modal .modal-overlay")) {
+        registerModal?.classList.add("hidden");
+    }
+
+    // =========================
+    // ❌ CERRAR REGISTER (X)
+    // =========================
+    if (e.target.closest("#register-modal .modal-close")) {
+        registerModal?.classList.add("hidden");
     }
 
     // =========================
