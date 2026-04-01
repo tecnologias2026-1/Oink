@@ -6,6 +6,16 @@ async function loadPage(page) {
         const response = await fetch(`pages/${page}.html`);
         const html = await response.text();
         mainContent.innerHTML = html;
+
+        // Inicializar TomSelect si existe en la página cargada
+        const selectEl = document.querySelector('#categoria-select');
+        if (selectEl) {
+            new TomSelect(selectEl, {
+                create: false,
+                placeholder: 'Selecciona una categoría',
+            });
+        }
+
     } catch (error) {
         mainContent.innerHTML = '<p>Error al cargar la página.</p>';
     }

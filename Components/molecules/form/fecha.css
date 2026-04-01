@@ -1,0 +1,14 @@
+.input-date {
+    cursor: pointer;
+    color: var(--color-text-light);
+}
+
+.input-date::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity var(--transition-fast) ease;
+}
+
+.input-date::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}

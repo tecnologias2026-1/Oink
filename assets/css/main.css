@@ -33,6 +33,8 @@
 @import url("../../components/molecules/historial-card/historial-card.css");
 @import url("../../components/molecules/debt-item/debt-item.css");
 @import url("../../components/molecules/form/form.css");
+@import url("../../components/molecules/form/fecha.css");
+@import url("../../components/molecules/form/list.css");
 
 /* =========================
    ORGANISMS
