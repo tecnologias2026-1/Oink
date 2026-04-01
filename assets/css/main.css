@@ -37,6 +37,7 @@
 @import url("../../components/molecules/form/list.css");
 @import url("../../components/molecules/landing/text.css");
 @import url("../../components/molecules/landing/cards_info.css");
+@import url("../../components/molecules/landing/card_planes.css");
 
 /* =========================
    ORGANISMS
@@ -48,7 +49,7 @@
 @import url("../../components/organims/Home/analysis-row.css");
 @import url("../../components/organims/historial-card/historial-card.css");
 @import url("../../components/organims/landing/info_cards.css");
-
+@import url("../../components/organims/landing/planes.css");
 
 /* =========================
    RESET
