@@ -85,6 +85,11 @@
 
 .text-light {
     color: var(--color-text-light);
+
+}
+
+.text-white {
+    color: white;
 }
 
 /* =========================

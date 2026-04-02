@@ -10,6 +10,10 @@ const loginModal = document.getElementById("login-modal");
 const registerModal = document.getElementById("register-modal");
 const forgotModal = document.getElementById("forgot-modal");
 
+const setPrimaryColor = (color) => {
+    document.documentElement.style.setProperty('--color-primary', color);
+};
+
 // =========================
 // 🎨 HELPERS DE COLORES
 // =========================
@@ -456,14 +460,24 @@ document.addEventListener("click", (e) => {
     }
 
     // Cerrar modal
-    if (e.target.closest("#profile-modal .modal-overlay") ||
+    if (
+        e.target.closest("#profile-modal .modal-overlay") ||
         e.target.closest("#profile-modal .modal-close") ||
-        e.target.closest("#btn-cancel-profile")) {
-
+        e.target.closest("#btn-cancel-profile")
+    ) {
         document.getElementById("profile-modal")?.classList.add("hidden");
     }
 
-    // Crear perfil
+    // =========================
+    // 🎨 FUNCIÓN CAMBIAR COLOR GLOBAL
+    // =========================
+    const setPrimaryColor = (color) => {
+        document.documentElement.style.setProperty('--color-primary', color);
+    };
+
+    // =========================
+    // ➕ CREAR PERFIL
+    // =========================
     if (e.target.closest("#btn-create-profile")) {
 
         const input = document.getElementById("profile-name");
@@ -472,23 +486,53 @@ document.addEventListener("click", (e) => {
         if (!name) return;
 
         const list = document.querySelector(".profiles-list");
-        if (!list) return; // 👈 importante
+        if (!list) return;
 
         const firstLetter = name.charAt(0).toUpperCase();
+
+        // 🎨 color aleatorio del sistema
+        const randomColor = palette[Math.floor(Math.random() * palette.length)];
 
         const newProfile = document.createElement("div");
         newProfile.classList.add("profile-item");
 
+        // ✅ CLAVE: asignar color al item
+        newProfile.style.setProperty('--profile-color', randomColor);
+
+        // guardar color en dataset
+        newProfile.dataset.color = randomColor;
+
         newProfile.innerHTML = `
-        <div class="profile-avatar">${firstLetter}</div>
-        <span class="text text-main2">${name}</span>
-    `;
+            <div class="profile-avatar" style="background:${randomColor}">
+                ${firstLetter}
+            </div>
+            <span class="text text-main2 text-white">${name}</span>
+        `;
 
         list.appendChild(newProfile);
 
         input.value = "";
 
         document.getElementById("profile-modal")?.classList.add("hidden");
+    }
+
+    // =========================
+    // 🔄 CAMBIAR PERFIL (COLOR GLOBAL)
+    // =========================
+    if (e.target.closest(".profile-item")) {
+
+        const profile = e.target.closest(".profile-item");
+        const color = profile.dataset.color;
+
+        if (color) {
+            setPrimaryColor(color);
+        }
+
+        // UI activo
+        document.querySelectorAll(".profile-item")
+            .forEach(p => p.classList.remove("active"));
+
+        profile.classList.add("active");
     }
 
 });

@@ -67,6 +67,7 @@
    Color Perfiles
 ========================= */
 
+    --color-primary: var(--color-1);
 
     --color-1: #E11D2E;
     /* rojo */
