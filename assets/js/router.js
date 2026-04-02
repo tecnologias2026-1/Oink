@@ -11,6 +11,27 @@ const registerModal = document.getElementById("register-modal");
 const forgotModal = document.getElementById("forgot-modal");
 
 // =========================
+// 🎨 HELPERS DE COLORES
+// =========================
+const getColor = (varName) =>
+    getComputedStyle(document.documentElement)
+        .getPropertyValue(varName)
+        .trim();
+
+const palette = [
+    getColor('--color-1'),
+    getColor('--color-2'),
+    getColor('--color-3'),
+    getColor('--color-4'),
+    getColor('--color-5'),
+    getColor('--color-6'),
+    getColor('--color-7'),
+    getColor('--color-8'),
+    getColor('--color-9'),
+    getColor('--color-10'),
+];
+
+// =========================
 // 📦 CARGA DE PÁGINAS
 // =========================
 async function loadPage(page) {
@@ -58,8 +79,8 @@ async function loadPage(page) {
                     datasets: [{
                         data: [100000, 50000],
                         backgroundColor: [
-                            'rgba(0, 166, 62, 0.9)',
-                            'rgba(231, 0, 11, 0.9)'
+                            getColor('--color-4'),
+                            getColor('--color-1')
                         ],
                         borderRadius: 6,
                         borderSkipped: false,
@@ -91,14 +112,7 @@ async function loadPage(page) {
                 labels: ['Alimentación', 'Transporte', 'Vivienda', 'Salud', 'Entretenimiento', 'Otro'],
                 datasets: [{
                     data: [30, 20, 25, 10, 8, 7],
-                    backgroundColor: [
-                        '#E7000B',
-                        '#F97316',
-                        '#EAB308',
-                        '#EC4899',
-                        '#8B5CF6',
-                        '#6B7280',
-                    ],
+                    backgroundColor: palette.slice(0, 6),
                     borderWidth: 0,
                 }]
             };
@@ -141,14 +155,7 @@ async function loadPage(page) {
                 labels: ['Salario', 'Freelance', 'Inversiones', 'Alquiler', 'Negocio', 'Otro'],
                 datasets: [{
                     data: [50, 20, 15, 8, 5, 2],
-                    backgroundColor: [
-                        '#00A63E',
-                        '#16A34A',
-                        '#4ADE80',
-                        '#86EFAC',
-                        '#BBF7D0',
-                        '#6B7280',
-                    ],
+                    backgroundColor: palette.slice(3, 9),
                     borderWidth: 0,
                 }]
             };
@@ -193,10 +200,10 @@ async function loadPage(page) {
                         {
                             label: 'Ingresos',
                             data: [0, 0, 0, 0, 5000, 100000],
-                            borderColor: '#00A63E',
-                            backgroundColor: 'rgba(0, 166, 62, 0.05)',
-                            pointBackgroundColor: '#ffffff',
-                            pointBorderColor: '#00A63E',
+                            borderColor: getColor('--color-4'),
+                            backgroundColor: `${getColor('--color-4')}0D`,
+                            borderColor: getColor('--color-1'),
+                            backgroundColor: `${getColor('--color-1')}0D`,
                             pointRadius: 5,
                             tension: 0.4,
                             fill: true,
