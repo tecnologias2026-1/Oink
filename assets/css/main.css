@@ -139,3 +139,21 @@ body {
    flex-direction: column;
    gap: 25px;
 }
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+@media (max-width: 1024px) {
+
+   body {
+      padding: 0 40px 40px 40px;
+   }
+
+   .sidebar {
+      left: 40px;
+      width: 220px;
+   }
+
+   .content {
+      margin-left: 220px;
+   }
+}
