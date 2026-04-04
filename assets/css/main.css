@@ -152,11 +152,15 @@ body {
       left: 40px;
       width: 220px;
    }
-
    .content {
-      margin-left: 220px;
+   margin-left: 260px;
+   
    }
 }
+
+/* =========================
+   RESPONSIVE MOBILE GRANDE
+========================= */
 @media (max-width: 768px) {
 
    body {
@@ -179,5 +183,43 @@ body {
       margin-left: 0;
       width: 100%;
       padding: 16px;
+   }
+}
+
+/* =========================
+   RESPONSIVE MOBILE PEQUEÑO
+========================= */
+@media (max-width: 360px) {
+
+   body {
+      padding: 0 8px 20px 8px;
+   }
+
+   .header {
+      height: 60px;
+      padding: 0 10px;
+   }
+
+   .logo {
+      width: 30px;
+   }
+
+   .sidebar {
+      position: relative;
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: auto;
+      padding: 10px;
+   }
+
+   .content {
+      margin-left: 0;
+      width: 100%;
+      padding: 10px;
+   }
+
+   .content-inner {
+      gap: 15px;
    }
 }
