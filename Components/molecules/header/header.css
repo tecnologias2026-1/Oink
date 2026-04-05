@@ -48,10 +48,19 @@
 
    .header {
       height: 60px;
+      padding: 0 8px;
    }
 
-   .brand-text {
-      display: none;
+   .brand {
+      gap: 8px;
+   }
+
+   .logo {
+      width: 35px;
+   }
+
+   .title-main {
+      font-size: 14px;
    }
 
 }

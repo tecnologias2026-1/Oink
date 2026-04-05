@@ -45,3 +45,46 @@
 .nav-item:hover:not(.active) .icon {
     filter: brightness(0) saturate(100%) invert(23%) sepia(94%) saturate(2000%) hue-rotate(214deg);
 }
+
+/* =========================
+   RESPONSIVE MOBILE GRANDE
+========================= */
+@media (max-width: 768px) {
+
+   .navigation {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+   }
+
+   .nav-item {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      min-width: 70px;
+      padding: 10px;
+   }
+
+}
+
+/* =========================
+   RESPONSIVE MOBILE PEQUEÑO
+========================= */
+@media (max-width: 360px) {
+
+   .nav-item {
+      min-width: 60px;
+      padding: 8px;
+   }
+
+   .nav-item .text {
+      font-size: 12px;
+   }
+
+   .nav-item .icon {
+      width: 18px;
+      height: 18px;
+   }
+
+}

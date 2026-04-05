@@ -17,3 +17,17 @@
 
     margin-bottom: var(--space-xs);
 }
+/* =========================
+   RESPONSIVE MOBILE PEQUEÑO
+========================= */
+@media (max-width: 360px) {
+
+   .register-card {
+      padding: 12px;
+   }
+
+   .register-card-header {
+      flex-wrap: wrap;
+   }
+
+}

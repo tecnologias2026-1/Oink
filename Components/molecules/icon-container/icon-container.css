@@ -63,3 +63,37 @@
     width: 22px;
     height: 22px;
 }
+
+/* =========================
+   RESPONSIVE MOBILE GRANDE
+========================= */
+@media (max-width: 768px) {
+
+   .icon-container {
+      width: 40px;
+      height: 40px;
+   }
+
+   .icon-container .icon {
+      width: 18px;
+      height: 18px;
+   }
+
+}
+
+/* =========================
+   RESPONSIVE MOBILE PEQUEÑO
+========================= */
+@media (max-width: 360px) {
+
+   .icon-container {
+      width: 35px;
+      height: 35px;
+   }
+
+   .icon-container .icon {
+      width: 16px;
+      height: 16px;
+   }
+
+}

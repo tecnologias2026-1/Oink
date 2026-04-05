@@ -70,3 +70,31 @@
     background: var(--color-savings);
 
 }
+
+/* =========================
+   RESPONSIVE MOBILE GRANDE
+========================= */
+@media (max-width: 768px) {
+
+   .feature-card {
+      padding: 16px;
+   }
+
+   .feature-icon {
+      width: 40px;
+      height: 40px;
+   }
+
+}
+
+/* =========================
+   RESPONSIVE MOBILE PEQUEÑO
+========================= */
+@media (max-width: 360px) {
+
+   .feature-icon {
+      width: 35px;
+      height: 35px;
+   }
+
+}
