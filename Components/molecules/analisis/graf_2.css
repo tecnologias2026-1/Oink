@@ -30,3 +30,21 @@
     gap: var(--space-sm);
     flex: 1;
 }
+
+/* =========================
+   RESPONSIVE MOBILE GRANDE
+========================= */
+@media (max-width: 768px) {
+   .chart-wrapper {
+      height: 200px;
+   }
+}
+
+/* =========================
+   RESPONSIVE MOBILE PEQUEÑO
+========================= */
+@media (max-width: 360px) {
+   .chart-wrapper {
+      height: 180px;
+   }
+}

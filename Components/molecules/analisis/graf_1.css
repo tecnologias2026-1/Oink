@@ -11,3 +11,21 @@
 
     width: 100%;
 }
+
+/* =========================
+   RESPONSIVE MOBILE GRANDE
+========================= */
+@media (max-width: 768px) {
+   .chart-summary-card {
+      padding: 12px;
+      gap: 12px;
+   }
+}
+/* =========================
+   RESPONSIVE MOBILE PEQUEÑO
+========================= */
+@media (max-width: 360px) {
+   .chart-summary-card {
+      padding: 10px;
+   }
+}
