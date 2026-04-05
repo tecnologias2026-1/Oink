@@ -38,3 +38,27 @@
 .stat-card-savings {
     background: var(--color-savings-claro);
 }
+
+/* =========================
+   RESPONSIVE MOBILE GRANDE
+========================= */
+@media (max-width: 768px) {
+
+   .stat-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+   }
+
+}
+
+/* =========================
+   RESPONSIVE MOBILE PEQUEÑO
+========================= */
+@media (max-width: 360px) {
+
+   .stat-card {
+      padding: 12px;
+   }
+
+}
