@@ -1,5 +1,5 @@
 // =========================
-// NAVEGACIÓN (YA TENÍAS)
+// NAVEGACIÓN 
 // =========================
 const navItems = document.querySelectorAll('.nav-item');
 
@@ -13,7 +13,7 @@ navItems.forEach(item => {
         const page = item.dataset.page;
         loadPage(page);
 
-        // 🔥 Cerrar menú en mobile
+        // Cerrar menú en mobile
         if (window.innerWidth <= 768) {
             sidebar.classList.remove('active');
         }
@@ -35,7 +35,7 @@ if (toggle && sidebar) {
 
 
 // =========================
-// CERRAR AL TOCAR AFUERA (PRO)
+// CERRAR AL TOCAR AFUERA
 // =========================
 document.addEventListener('click', (e) => {
     if (
