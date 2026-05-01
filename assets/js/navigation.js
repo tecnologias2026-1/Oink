@@ -16,6 +16,7 @@ navItems.forEach(item => {
         // Cerrar menú en mobile
         if (window.innerWidth <= 768) {
             sidebar.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
         }
     });
 });
@@ -26,10 +27,12 @@ navItems.forEach(item => {
 // =========================
 const toggle = document.getElementById('menu-toggle');
 const sidebar = document.querySelector('.sidebar');
+const sidebarOverlay = document.querySelector('.sidebar-overlay');
 
-if (toggle && sidebar) {
+if (toggle && sidebar && sidebarOverlay) {
     toggle.addEventListener('click', () => {
         sidebar.classList.toggle('active');
+        sidebarOverlay.classList.toggle('active');
     });
 }
 
@@ -45,5 +48,6 @@ document.addEventListener('click', (e) => {
         !toggle.contains(e.target)
     ) {
         sidebar.classList.remove('active');
+        sidebarOverlay.classList.remove('active');
     }
 });

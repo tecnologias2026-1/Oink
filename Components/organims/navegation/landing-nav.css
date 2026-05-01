@@ -73,6 +73,31 @@
     border-radius: 10px;
 }
 
+.sidebar-overlay {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    z-index: 999;
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
 @media (max-width: 768px) {
     .modal {
         padding: 16px;
@@ -86,10 +111,17 @@
         max-height: 90vh;
         overflow-y: auto;
     }
+
 }
 
 @media (max-width: 480px) {
     .modal-content {
         padding: 20px 16px;
+    }
+}
+
+@media (min-width: 769px) {
+    .sidebar-overlay {
+        display: none;
     }
 }
