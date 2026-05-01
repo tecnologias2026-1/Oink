@@ -139,80 +139,70 @@ body {
    flex-direction: column;
    gap: 25px;
 }
+
 /* =========================
    RESPONSIVE TABLET
 ========================= */
-@media (max-width: 1024px) {
-
+@media (max-width: 768px) {
    body {
-      padding: 0 40px 40px 40px;
+      padding: 0;
    }
 
-   .sidebar {
-      left: 40px;
-      width: 220px;
+   .page-wrapper {
+      padding-top: 65px;
+      flex-direction: column;
+      min-height: 100vh;
    }
-   .content {
-   margin-left: 260px;
-   
-   }
-}
-.menu-toggle {
-   display: none;
-}
 
-/* =========================
-   RESPONSIVE MOBILE GRANDE
-========================= */
-   @media (max-width: 768px) {
-
-      body.logged-in .menu-toggle {
+   body.logged-in .menu-toggle {
       display: block;
       font-size: 24px;
       background: none;
       border: none;
       cursor: pointer;
+      color: var(--color-text);
    }
 
-
-#landing-nav {
-      display: flex;
-      flex-direction: column;
+   .sidebar {
       position: fixed;
-      top: 80px;
-      left: 0;
-      width: 100%;
-      padding: 10px;
+      top: 65px;
+      left: -280px;
+      width: 280px;
+      height: calc(100vh - 65px);
+      padding: 16px;
       background: var(--color-background);
-      z-index: 998;
+      transition: left 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
    }
 
-   body {
-      padding: 0 10px 20px 10px;
+   .sidebar.active {
+      left: 0;
    }
-
-   .page-wrapper {
-      flex-direction: column;
-   }
-
-.sidebar {
-   position: fixed;
-   top: 70px;
-   left: -100%;
-   width: 260px;
-   height: calc(100% - 70px);
-   background: var(--color-background);
-   transition: left 0.3s ease;
-   z-index: 999;
-}
-
-.sidebar.active {
-   left: 0;
-}
 
    .content {
       margin-left: 0;
       width: 100%;
       padding: 16px;
    }
+
+   .content-inner {
+      max-width: 100%;
+   }
+
+   #landing-nav {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+      background: transparent;
+      position: static;
+      z-index: auto;
+   }
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+   display: block;
 }
