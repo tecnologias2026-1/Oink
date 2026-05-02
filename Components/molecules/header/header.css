@@ -66,24 +66,3 @@
       flex-shrink: 0;
    }
 }
-
-@media (max-width: 768px) {
-   .sidebar {
-      position: fixed;
-      top: 65px;
-      right: -280px;
-      left: auto;
-      bottom: 0;
-
-      width: 280px;
-      height: calc(100dvh - 65px);
-
-      overflow-y: auto;
-      transition: right 0.3s ease;
-      z-index: 1000;
-   }
-
-   .sidebar.active {
-      right: 0;
-   }
-}

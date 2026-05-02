@@ -1,4 +1,3 @@
-/* history-card.css */
 .history-card {
     display: flex;
     flex-direction: column;
@@ -7,22 +6,6 @@
 
     background: var(--color-white);
     border-radius: 10px;
-}
-
-.history-card-login {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    padding: 32px;
-
-    background: white;
-    border-radius: 16px;
-
-    width: 100%;
-    max-width: 420px;
-
-
 }
 
 .history-card-header {
@@ -41,10 +24,33 @@
     background: var(--color-white);
     border-radius: 10px;
 
+    width: 100%;
+    max-width: 420px;
+
     align-items: center;
-    /* centra horizontal */
     justify-content: center;
-    /* centra vertical (si hay espacio) */
     text-align: center;
-    /* centra texto */
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .history-card {
+        gap: 20px;
+        padding: var(--space-md);
+        border-radius: 8px;
+    }
+
+    .history-card-login {
+        max-width: 100%;
+        padding: var(--space-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .history-card {
+        gap: 16px;
+        padding: var(--space-sm);
+    }
 }

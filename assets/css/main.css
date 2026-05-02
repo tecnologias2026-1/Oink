@@ -229,17 +229,17 @@ body {
    .sidebar {
       position: fixed;
       top: 65px;
-      left: -280px;
+      right: -280px;
+      left: auto;
       width: 280px;
       height: calc(100dvh - 65px);
       overflow-y: auto;
-      transition: left 0.3s ease;
+      transition: right 0.3s ease;
       z-index: 1000;
    }
 
-
    .sidebar.active {
-      left: 0;
+      right: 0;
    }
 
    .content {
